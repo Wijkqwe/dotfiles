@@ -1,0 +1,27 @@
+
+
+[font]
+size = 16.0
+
+[font.normal]
+family = "monospace"
+style = "Regular"
+
+
+[colors.primary]
+background = "#202020"
+foreground = "#33ccff"
+
+[colors.normal]
+black = "#000000"
+blue = "#6699cc"
+cyan = "#33e0e0"
+white = "#ffffff"
+
+[colors.bright]
+blue = "#6666ff"
+cyan = "#00ffff"
+
+
+
+
