@@ -14,6 +14,8 @@ fi
 alias la="ls -A"
 alias ll="ls -lh --time-style=long-iso"
 alias lla="ls -lhA --time-style=long-iso"
+alias cat="cat -n"
+alias grep="grep -n --color=auto"
 
 alias df="df -h"
 alias du="du -h -d 1"

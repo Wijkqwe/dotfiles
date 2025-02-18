@@ -131,16 +131,6 @@ if 1
 
 endif
 
-" Switch syntax highlighting on when the terminal has colors or when using the
-" GUI (which always has colors).
-if &t_Co > 2 || has("gui_running")
-  " Revert with ":syntax off".
-  syntax on
-
-  " I like highlighting strings inside C comments.
-  " Revert with ":unlet c_comment_strings".
-  let c_comment_strings=1
-endif
 
 " Convenient command to see the difference between the current buffer and the
 " file it was loaded from, thus the changes you made.
@@ -163,7 +153,35 @@ set nu
 set rnu
 set tabstop=4
 set shiftwidth=4
-" set expandtab
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
+": color {{{
+
+set t_Co=256
+" if has('termguicolors')
+"	set termguicolors
+" endif
+
+" Switch syntax highlighting on when the terminal has colors or when using the
+" GUI (which always has colors).
+if &t_Co > 2 || has("gui_running")
+  " Revert with ":syntax off".
+  syntax on
+
+  " I like highlighting strings inside C comments.
+  " Revert with ":unlet c_comment_strings".
+  let c_comment_strings=1
+endif
+
+
+
+
+
+
+
+": }}}
+""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
 
