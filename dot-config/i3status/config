@@ -86,7 +86,7 @@ memory {
         threshold_degraded = "1G"
 #	threshold_critical = "500M"
         format = "%used/%total"
-        format_degraded = "MEMORY"
+        format_degraded = "%used/%total"
 #	format_critical = "MEMORY"
 }
 

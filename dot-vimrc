@@ -65,10 +65,6 @@ endif
 map Q gq
 sunmap Q
 
-" CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
-" so that you can undo CTRL-U after inserting a line break.
-" Revert with ":iunmap <C-U>".
-inoremap <C-U> <C-G>u<C-U>
 
 " In many terminal emulators the mouse works just fine.  By enabling it you
 " can position the cursor, Visually select and scroll with the mouse.
@@ -154,6 +150,20 @@ set rnu
 set tabstop=4
 set shiftwidth=4
 
+""""""""""""""""""""""""""""""""""""""""""""""""""
+": vimMap {{{
+
+": <leader> \
+
+" CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
+" so that you can undo CTRL-U after inserting a line break.
+" Revert with ":iunmap <C-U>".
+inoremap <C-U> <C-G>u<C-U>
+
+nnoremap <leader>yi :call <SID>SynStack()<CR>
+
+": }}}
+""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 ": color {{{
@@ -174,16 +184,45 @@ if &t_Co > 2 || has("gui_running")
   let c_comment_strings=1
 endif
 
+hi Comment cterm=NONE ctermfg=26
+hi LineNr cterm=NONE ctermfg=6
+hi MatchParen cterm=NONE ctermfg=0 ctermbg=14
+hi Number cterm=NONE ctermfg=12
+hi String cterm=NONE ctermfg=69
+hi vimCommand cterm=NONE ctermfg=39
+hi vimOper cterm=NONE ctermfg=12
+" hi Statement cterm=NONE ctermfg=51 
 
+hi cBlock cterm=NONE ctermfg=14
+hi cConditional cterm=NONE ctermfg=12
+hi link cCharacter cString
+hi link cDefine cInclude
+hi cFormat cterm=NONE ctermfg=39
+hi cInclude cterm=NONE ctermfg=38
+hi cNumber cterm=NONE ctermfg=12
+hi cParen cterm=NONE ctermfg=45
+hi cRepeat cterm=NONE ctermfg=12
+hi cString cterm=NONE ctermfg=69
+hi cSpecial cterm=NONE ctermfg=39
+hi cStorageClass cterm=NONE ctermfg=38
+hi link cStructure cType
+hi cType cterm=NONE ctermfg=38
 
+hi link confString cString
 
+hi link fsDeviceUUID Number
+hi link fsOptionsString String
 
+" hi link gitignorePattern
 
 
 ": }}}
 """"""""""""""""""""""""""""""""""""""""""""""""""
 
-
+": display hi infor
+function! <SID>SynStack()
+    echo map(synstack(line('.'),col('.')),'synIDattr(v:val, "name")')
+endfunc
 
 
 
