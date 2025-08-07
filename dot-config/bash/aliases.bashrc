@@ -4,9 +4,9 @@
 
 ##################################################
 #: think_twice {{{
-alias rm="rm -i";
-alias cp="cp -i";
-alias mv="mv -i";
+alias rm="rm -i"
+alias cp="cp -i"
+alias mv="mv -i"
 #: }}}
 ##################################################
 #: view {{{
@@ -17,7 +17,7 @@ fi
 alias la="ls -A"
 alias ll="ls -lh --time-style=long-iso"
 alias lla="ls -lhA --time-style=long-iso"
-alias cat="cat -n"
+# alias cat="cat -n"
 alias grep="grep -n --color=auto"
 
 alias tree="tree -L 1"
@@ -47,12 +47,13 @@ alias gl="git log --graph --all --abbrev-commit"
 alias sti3="startx /usr/bin/i3"
 
 ##################################################
-#: {{{
+#: systemctl {{{
 alias sysenable="systemctl enable"
 alias sysstart="systemctl start"
 alias sysstop="systemctl stop"
 alias sysstatus="systemctl status"
 #: }}}
+##################################################
 
 
 

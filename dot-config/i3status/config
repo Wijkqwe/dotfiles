@@ -20,7 +20,7 @@ order += "run_watch VPNC"
 order += "battery all"
 # order += "cpu_temperature 0"
 order += "cpu_usage"
-order += "disk /"
+# order += "disk /"
 order += "load"
 order += "memory"
 order += "tztime local"
@@ -55,8 +55,7 @@ battery all {
 }
 
 # cpu_temperature 0 {
-#	path = ""
-#	format = ""
+#	format = "%degrees °C"
 #	format_down = ""
 # }
 
@@ -64,29 +63,29 @@ cpu_usage {
 	path = "/proc/stat"
 	max_threshold = 80
 	degraded_threshold = 65
-	format = "all:%usage"
-	format_above_threshold = "%usage"
-	format_above_degraded_threshold = "%usage"
+	format = "CPU:%usage"
+	format_above_threshold = "CPU:%usage"
+	format_above_degraded_threshold = "CPU:%usage"
 }
 
 disk "/" {
 	prefix_type = custom
 	low_threshold = 4
-	threshold_type = gbytes_avail
+ 	threshold_type = gbytes_avail
         format = "%used/%total"
 	format_below_threshold = "%avail(%percentage_avail)"
 }
 
 load {
-        format = "%1min"
+        format = "Load:%1min"
 }
 
 memory {
 	decimals = 1
         threshold_degraded = "1G"
 #	threshold_critical = "500M"
-        format = "%used/%total"
-        format_degraded = "%used/%total"
+        format = "MEM:%used/%total"
+        format_degraded = "MEM:%used/%total"
 #	format_critical = "MEMORY"
 }
 

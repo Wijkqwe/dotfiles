@@ -12,6 +12,7 @@ usermodmap=$HOME/.Xmodmap
 sysresources=$xinitdir/.Xresources
 sysmodmap=$xinitdir/.Xmodmap
 
+
 # merge in defaults and keymaps
 
 if [ -f $sysresources ]; then

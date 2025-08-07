@@ -9,6 +9,7 @@
 " Individual settings can be reverted with ":set option&".
 " Other commands can be reverted as mentioned below.
 
+": dont know {{{
 " When started as "evim", evim.vim will already have done these settings.
 if v:progname =~? "evim"
   finish
@@ -144,6 +145,7 @@ if has('langmap') && exists('+langremap')
   set nolangremap
 endif
 
+": }}}
 
 set nu
 set rnu
@@ -151,7 +153,7 @@ set tabstop=4
 set shiftwidth=4
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
-": vimMap {{{
+": map {{{
 
 ": <leader> \
 
@@ -219,10 +221,55 @@ hi link fsOptionsString String
 ": }}}
 """"""""""""""""""""""""""""""""""""""""""""""""""
 
+""""""""""""""""""""""""""""""""""""""""""""""""""
+": func {{{
+
 ": display hi infor
 function! <SID>SynStack()
     echo map(synstack(line('.'),col('.')),'synIDattr(v:val, "name")')
 endfunc
+
+": }}}
+""""""""""""""""""""""""""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
+": fold {{{
+
+set foldmethod=marker
+set foldlevel=0
+
+": }}}
+""""""""""""""""""""""""""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
+": undodir {{{
+
+set undofile
+
+if !isdirectory(expand('~/.vim/undodir'))
+	call mkdir(expand('~/.vim/undodir'),'p')
+endif
+
+set undodir=~/.vim/undodir
+
+
+": }}}
+""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
