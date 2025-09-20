@@ -11,7 +11,7 @@ _sab="\[\033["            #: set_ansi_begin
 _sae="m\]"                #: set_ansi_end
 _rea="${_sab}00${_sae}"   #: reset ansi
 
-# PS1='[\u@\h \W]\$ '
+#: PS1='[\u@\h \W]\$ '
 if [ ! $UID -eq 0 ]; then
 	if [ -u "$SSH_CONNECTION" ]; then
 		PS1='[\[\033[09m\]\u@\h\[\033[00m\] \W]\$ '
@@ -27,6 +27,7 @@ HISTCONTROL=ignoreboth  #: ignore identical or empty lines in history
 shopt -s histappend
 
 
+#: bash config
 _BASH_CONFIG="$HOME/.config/bash"
 [ -f "${_BASH_CONFIG}/aliases.bashrc" ] && . "${_BASH_CONFIG}/aliases.bashrc"
 [ -f "${_BASH_CONFIG}/startup.bashrc" ] && . "${_BASH_CONFIG}/startup.bashrc"
