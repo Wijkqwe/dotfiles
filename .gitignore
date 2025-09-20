@@ -1,0 +1,37 @@
+#: everything 
+*
+
+#: except
+!.gitignore
+!.stow-local-ignore
+!dot-bash_profile
+!dot-bashrc
+!dot-vimrc
+!dot-xinitrc
+
+!dot-config/
+!dot-config/alacritty/
+!dot-config/alacritty/alacritty.toml
+!dot-config/bash/
+!dot-config/bash/aliases.bashrc
+!dot-config/dircolors
+!dot-config/fontconfig/
+!dot-config/gtk-3.0/
+!dot-config/i3/
+!dot-config/i3/config
+!dot-config/i3status/
+!dot-config/i3status/config
+!dot-config/kitty/
+!dot-config/kitty/kitty.conf
+!dot-config/konsolerc
+!dot-config/konsolesshconfig
+!dot-config/libaccounts-glib/
+!dot-config/libaccounts-glib/accounts.db
+!dot-config/libaccounts-glib/accounts.db-shm
+!dot-config/libaccounts-glib/accounts.db-wal
+!dot-config/terminator/
+!dot-config/terminator/config
+!dot-config/user-dirs.dirs
+!dot-config/user-dirs.locale
+
+
