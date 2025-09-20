@@ -9,28 +9,54 @@
 !dot-vimrc
 !dot-xinitrc
 
+
 !dot-config/
+#: alacritty
 !dot-config/alacritty/
 !dot-config/alacritty/alacritty.toml
+#: bash
 !dot-config/bash/
 !dot-config/bash/aliases.bashrc
-!dot-config/dircolors
+!dot-config/bash/startup.bashrc
+#: btop
+!dot-config/btop/
+!dot-config/btop/themes
+!dot-config/btop/btop.conf
+
 !dot-config/fontconfig/
 !dot-config/gtk-3.0/
+#: htop
+!dot-config/htop/
+!dot-config/htop/htoprc
+#: i3
 !dot-config/i3/
 !dot-config/i3/config
+#: i3status
 !dot-config/i3status/
 !dot-config/i3status/config
+#: kde
+!dot-config/kde.org/
+!dot-config/kde.org/UserFeedback.org.kde.dolphin.config
+#: kitty
 !dot-config/kitty/
 !dot-config/kitty/kitty.conf
-!dot-config/konsolerc
-!dot-config/konsolesshconfig
-!dot-config/libaccounts-glib/
-!dot-config/libaccounts-glib/accounts.db
-!dot-config/libaccounts-glib/accounts.db-shm
-!dot-config/libaccounts-glib/accounts.db-wal
+#: nvim
+!dot-config/nvim/
+!dot-config/nvim/init.vim
+#: terminator
 !dot-config/terminator/
 !dot-config/terminator/config
+#: tmux
+!dot-config/tmux/
+!dot-config/tmux/plugins/
+!dot-config/tmux/tmux.conf
+#: yay
+!dot-config/yay/
+
+!dot-config/dircolors
+!dot-config/dolphinrc
+!dot-config/konsolerc
+!dot-config/konsolesshconfig
 !dot-config/user-dirs.dirs
 !dot-config/user-dirs.locale
 
