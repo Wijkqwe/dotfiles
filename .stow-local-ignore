@@ -9,5 +9,6 @@
 #: file
 /.git
 .gitignore
-
+example-dot-gitconfig
+README.md
 
