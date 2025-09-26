@@ -1,0 +1,19 @@
+#: @author Wijkqwe
+
+
+[user]
+	name = Wijkqwe
+#	email = 
+
+[core]
+	paper = more
+	pager = more
+[safe]
+	directory = /opt/0/stow
+	directory = /data/
+	directory = /data/dotfiles
+
+[init]
+	defaultBranch = main
+[http]
+	sslVerify = false
