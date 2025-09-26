@@ -1,14 +1,7 @@
 
-
-
-
-#: folder
-/0
-0
-
-#: file
-/.git
+.git
 .gitignore
 example-dot-gitconfig
-README.md
+
+README.*
 
