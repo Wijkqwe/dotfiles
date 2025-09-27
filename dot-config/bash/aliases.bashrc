@@ -41,6 +41,8 @@ alias gc="git commit -m"
 alias gac="git add . && git commit -m update"
 
 alias gl="git log --graph --all --abbrev-commit"
+
+alias gr="git remote"
 #: }}}
 ##################################################
 
