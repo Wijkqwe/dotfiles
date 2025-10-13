@@ -32,6 +32,7 @@ _BASH_CONFIG="$HOME/.config/bash"
 [ -f "${_BASH_CONFIG}/aliases.bashrc" ] && . "${_BASH_CONFIG}/aliases.bashrc"
 [ -f "${_BASH_CONFIG}/startup.bashrc" ] && . "${_BASH_CONFIG}/startup.bashrc"
 
+[ -f "$HOME/.config/dircolors" ] && eval $(dircolors "$HOME/.config/dircolors")
 
 
 case ${TERM} in
