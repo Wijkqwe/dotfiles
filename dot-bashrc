@@ -1,6 +1,6 @@
 #: .bashrc
-#: /etc/bash.bashrc
-#
+#: @author Wijkqwe
+#: 
 
 
 #: If not running interactively, don't do anything
@@ -11,6 +11,8 @@ _sab="\[\033["            #: set_ansi_begin
 _sae="m\]"                #: set_ansi_end
 _rea="${_sab}00${_sae}"   #: reset ansi
 
+
+#: prompt {{{
 #: PS1='[\u@\h \W]\$ '
 if [ ! $UID -eq 0 ]; then
 	if [ -u "$SSH_CONNECTION" ]; then
@@ -21,20 +23,28 @@ if [ ! $UID -eq 0 ]; then
 else
 	PS1='\[\033[36;49m\][\u@\h\[\033[39m\] \W\[\033[36m\]]\[\033[00m\]\$ '
 fi
-	
+
+#: }}}
+
 
 HISTCONTROL=ignoreboth  #: ignore identical or empty lines in history
 shopt -s histappend
 
+
+#: file {{{
 
 #: bash config
 _BASH_CONFIG="$HOME/.config/bash"
 [ -f "${_BASH_CONFIG}/aliases.bashrc" ] && . "${_BASH_CONFIG}/aliases.bashrc"
 [ -f "${_BASH_CONFIG}/startup.bashrc" ] && . "${_BASH_CONFIG}/startup.bashrc"
 
+#: dircolors
 [ -f "$HOME/.config/dircolors" ] && eval $(dircolors "$HOME/.config/dircolors")
 
+#: }}}
 
+
+#: terminal title
 case ${TERM} in
   Eterm*|alacritty*|aterm*|foot*|gnome*|konsole*|kterm*|putty*|rxvt*|tmux*|xterm*)
     PROMPT_COMMAND+=('printf "\033]0;%s@%s:%s\007" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/\~}"')

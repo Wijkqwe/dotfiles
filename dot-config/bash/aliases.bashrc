@@ -1,6 +1,7 @@
 #: aliases.bashrc
 #: bash/aliases.bashrc
-
+#: @author Wijkqwe
+#:
 
 ##################################################
 #: think_twice {{{
