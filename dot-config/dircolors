@@ -1,3 +1,6 @@
+#: vim:ft=dircolors
+#: #auther Wijkqwe
+#:
 # Configuration file for dircolors, a utility to help you set the
 # LS_COLORS environment variable used by GNU ls with the --color option.
 # Copyright (C) 1996-2025 Free Software Foundation, Inc.
@@ -7,9 +10,9 @@
 # The keywords COLOR, OPTIONS, and EIGHTBIT (honored by the
 # slackware version of dircolors) are recognized but ignored.
 # Global config options can be specified before TERM or COLORTERM entries
+
 # ===================================================================
-# Terminal filters
-# ===================================================================
+# Terminal filters {{{
 # Below are TERM or COLORTERM entries, which can be glob patterns, which
 # restrict following config to systems with matching environment variables.
 COLORTERM ?*
@@ -38,9 +41,11 @@ TERM terminator
 TERM tmux*
 TERM vt100
 TERM xterm*
+#: }}}
 # ===================================================================
-# Basic file attributes
+
 # ===================================================================
+# Basic file attributes {{{
 # Below are the color init strings for the basic file types.
 # One can use codes for 256 or more colors supported by modern terminals.
 # The default color codes use the capabilities of an 8 color terminal
@@ -73,9 +78,11 @@ OTHER_WRITABLE 34;42 # dir that is other-writable (o+w) and not sticky
 STICKY 37;44 # dir with the sticky bit set (+t) and not other-writable
 # This is for regular files with execute permission:
 EXEC 01;32
+#: }}}
+# ===================================================================
+
 # ===================================================================
 # File extension attributes
-# ===================================================================
 # List any file extensions like '.gz' or '.tar' that you would like ls
 # to color below. Put the suffix, a space, and the color init string.
 # (and any comments you want to add after a '#').
@@ -241,3 +248,5 @@ EXEC 01;32
 #
 # Subsequent TERM or COLORTERM entries, can be used to add / override
 # config specific to those matching environment variables.
+# ===================================================================
+
