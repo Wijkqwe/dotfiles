@@ -21,18 +21,32 @@ fi
 
 #: }}}
 
-#: tmux
-'if [ -x "$(command -v tmux)" ] && [ -n "${DISPLAY}" ] && [ -z "${TMUX}" ]; then
+#######
+#: tmux {{{
+: '
+if [ -x "$(command -v tmux)" ] && [ -n "${DISPLAY}" ] && [ -z "${TMUX}" ]; then
     exec tmux new-session -A -s ${USER} >/dev/null 2>&1
-fi'
+fi
+'
+#: }}}
+#######
 
 
+#: bind {{{
+#: in X11
+setxkbmap -option caps:escape
+#: }}}
+
+
+#: run when start {{{
 if [ -d "/data" ]; then
 	cd /data
 fi
 
-#: bind in X11
-setxkbmap -option caps:escape
-
+if ! [ -n "$DISPLAY" ]; then
+	echo "into X11"
+	sti3
+fi
+#: }}}
 
 
