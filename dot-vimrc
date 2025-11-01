@@ -151,6 +151,7 @@ set nu
 set rnu
 set tabstop=4
 set shiftwidth=4
+set clipboard=unnamedplus ": linux use + register
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 ": map {{{
@@ -217,6 +218,9 @@ hi link fsOptionsString String
 
 " hi link gitignorePattern
 
+hi Folded ctermfg=39 ctermbg=238 cterm=NONE
+hi FoldColumn ctermfg=117 ctermbg=235
+
 
 ": }}}
 """"""""""""""""""""""""""""""""""""""""""""""""""
@@ -255,7 +259,6 @@ set undodir=~/.vim/undodir
 
 ": }}}
 """"""""""""""""""""""""""""""""""""""""""""""""""
-
 
 
 
